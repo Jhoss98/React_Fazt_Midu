@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useContext } from "react";
+import { TaskContext } from "../context/Context";
 
 export function TaskForm({ createTask }) {
   const [title, setTittle] = useState("");
@@ -6,27 +8,27 @@ export function TaskForm({ createTask }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title,description)
+    console.log(title, description);
     createTask({
-        title,
-        description
+      title,
+      description,
     });
-    setTittle('')
-    setDescription('')
+    setTittle("");
+    setDescription("");
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <input
-        autoFocus
+          autoFocus
           value={title}
           type="text"
           placeholder="write your task"
           onChange={(e) => setTittle(e.target.value)}
         />
         <textarea
-        value={description}
+          value={description}
           placeholder="write the task's description"
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>

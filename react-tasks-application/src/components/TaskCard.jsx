@@ -1,8 +1,14 @@
-export function TaskCard({ task}) {
+import { useContext } from "react";
+import { TaskContext } from "../context/Context";
+
+export function TaskCard({ task, deleteTask }) {
+  const value = useContext(TaskContext);
+
   return (
     <div>
       <h3>{task.title}</h3>
       <p>{task.description}</p>
+      <button onClick={() => deleteTask(task.id)}>delte task</button>
     </div>
   );
 }

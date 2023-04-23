@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { TaskContext } from "../context/Context";
 
-export function TaskCard({ task, deleteTask }) {
-  const value = useContext(TaskContext);
+export function TaskCard({task}) {
+  const { deleteTask} = useContext(TaskContext);
 
   return (
     <div>

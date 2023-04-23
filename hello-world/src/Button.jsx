@@ -1,11 +1,13 @@
-import PropTypes from  'prop-types'
+import PropTypes from "prop-types";
 
-export function Button ({text}){
-    return <button>
-        {text}
-    </button>
+export function Button({ text }) {
+  return <button onClick={
+    function (){
+        console.log('Hello Wrold')
+    }
+  }>{text}</button>;
 }
 
 Button.propTypes = {
-    text: PropTypes.string.isRequired
-}
+  text: PropTypes.string.isRequired,
+};

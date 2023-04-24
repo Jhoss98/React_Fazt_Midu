@@ -15,7 +15,7 @@ export function TaskContextProvider(props) {
     setTasks([
       ...tasks,
       {
-        id: tasks.length,
+        id: tasks.length * Math.floor(Math.random() * 100),
         title: task.title,
         description: task.description,
       },

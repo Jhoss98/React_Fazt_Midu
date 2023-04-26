@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import { useEffect, useState } from "react";
-import { tasks as data  } from "../data/tasks";
+import { tasks as data } from "../data/tasks";
 
 export const TaskContext = createContext();
 
